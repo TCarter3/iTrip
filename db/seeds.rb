@@ -1,18 +1,23 @@
 
 User.create!(email: "test@test.com", password: "password")
-Trip.create!(name: Faker::Lorem.sentence(word_count: 3), user_id: 1)
-Location.create!(
-    name: Faker::Address.country,
-    days: rand(1..10),
-    trip_id: 1
+Trip.create!(
+  name: Faker::Lorem.sentence(word_count: 3),
+  start_date: DateTime.new(2019,9,1,17),
+  end_date: DateTime.new(2019,10,1,17),
+  user_id: 1
 )
-Address.create!(
-    street: Faker::Address.street_name,
-    city: Faker::Address.city,
-    state: Faker::Address.state,
-    zip: Faker::Address.zip,
-    location_id: record.id
-  )
+Location.create!(
+  name: Faker::Address.country,
+  days: rand(1..10),
+  trip_id: 1
+)
+# Address.create!(
+#     street: Faker::Address.street_name,
+#     city: Faker::Address.city,
+#     state: Faker::Address.state,
+#     zip: Faker::Address.zip,
+#     location_id: 1
+# )
 # 5.times do
 #   User.create!(
 #     email: Faker::Internet.email,
