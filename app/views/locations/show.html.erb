@@ -1,8 +1,8 @@
 <%= render "layouts/navbar" %>
 <br /> 
 <h1 class="ui purple header"><%= @trip.name %></h1>
-<h3>Location: <%= @location.name %></h3>
-<h3>Days: <%= @location.days %></h3>
+<h3>&#127758;Location: <%= @location.name %></h3>
+<h3>&#128198;Days: <%= @location.days %></h3>
 <%= 
   if @location.address == nil
     link_to "New address", new_location_address_path(@location)
