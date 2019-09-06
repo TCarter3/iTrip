@@ -30,7 +30,7 @@ class LocationsController < ApplicationController
     if @location.update(location_params)
       redirect_to [@trip, @location]
     else 
-      render :new 
+      render :edit 
     end
   end
 
