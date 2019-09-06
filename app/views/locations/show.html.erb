@@ -2,9 +2,9 @@
 <h1><%= @trip.name %></h1>
 <h3>Location: <%= @location.name %></h3>
 <h3>Days: <%= @location.days %></h3>
-<%= @location.addresses.each do |address| %>
-  <%= render "addresses/address", { address: address } %>
-<% end %>
+<%= link_to "New address", new_location_address_path(@location) %>
+<%= render "addresses/address" %>
+
 <br/>
 <hr/>
 <%= link_to "Edit Location", edit_trip_location_path([@trip, @location]) %> |
