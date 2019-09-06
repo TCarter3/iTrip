@@ -1,4 +1,5 @@
 <h1><%= @trip.name %> Trip</h1>
+<p><%= link_to "Edit", edit_trip_path(@trip) %> | <%= link_to "Delete", trip_path(@trip), method: :delete %>
 <div>
 <p><%= @trip.start_date %> - <%= @trip.end_date %></p>
 
