@@ -1,26 +1,35 @@
-<h2>Log in</h2>
+<h3 class="ui right floated button">
+<%= link_to "Sign up", new_user_registration_path, class: "ui inverted purple button" %>
+<%= link_to "Forgot Password", new_user_password_path, class: "ui inverted purple button" %>
+</h3>
 
+<br />
+<br />
+
+<h1 class="ui center aligned purple header">Enter your Login In Info</h1>
+
+<div class="ui center aligned header">
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
+
+  <div class="ui input">
+    <br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>
-
-  <div class="field">
-    <%= f.label :password %><br />
+  <div class="ui input">
+    <br />
     <%= f.password_field :password, autocomplete: "current-password" %>
   </div>
-
+<br />
+<br />
   <% if devise_mapping.rememberable? %>
     <div class="field">
       <%= f.check_box :remember_me %>
       <%= f.label :remember_me %>
     </div>
   <% end %>
-
   <div class="actions">
-    <%= f.submit "Log in" %>
+    <%= f.submit "Log in", class: "ui inverted purple button" %>
   </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+  <% end %>
+  
+</div> 
