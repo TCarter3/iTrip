@@ -1,5 +1,6 @@
-<h1>Locations#show</h1>
-<h1><%= @trip.name %></h1>
+<%= render "layouts/navbar" %>
+<br /> 
+<h1 class="ui purple header"><%= @trip.name %></h1>
 <h3>Location: <%= @location.name %></h3>
 <h3>Days: <%= @location.days %></h3>
 <%= link_to "New address", new_location_address_path(@location) %>
