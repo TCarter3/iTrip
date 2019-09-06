@@ -10,11 +10,11 @@ class AddressesController < ApplicationController
   end
 
   def new
-    @address = Adress.new
+    @address = Address.new
   end
 
   def create
-    @address = Adress.new(address_params)
+    @address = Address.new(address_params)
 
     if @address.save
       redirect_to location_address_path(@location, @adress)
