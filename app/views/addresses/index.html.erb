@@ -1,5 +1,5 @@
 <h1><%= @location.name %> Addresses</h1>
 <%= link_to 'Add address', new_location_address_path(@location, @address) %>
 <% @addresses.each do |address| %>
-  <p><%= link_to address.street, location_address_path(@location, @address) %></p>
+  <%= link_to address.street, location_address_path(@location, @address) %>
 <% end %>
