@@ -1,9 +1,11 @@
 <h1>Locations#show</h1>
 <h1><%= @trip.name %></h1>
-<h3>Location: <%= @location.name %></h3>
-<h3>Days: <%= @location.days %></h3>
+<h3>&#128293;Location: <%= @location.name %></h3>
+<h3>&#128198;Days: <%= @location.days %></h3>
 <br/>
 <hr/>
 <%= link_to "Edit Location", edit_trip_location_path([@trip, @location]) %> |
 <%= link_to "Delete Location", [@trip, @location], method: :delete %> |
-<%= link_to "Back To Locations", trip_path(@trip) %>
+<%= link_to "Add Address", location_address_path(@location) %> 
+<hr/>
+<%= link_to "Back", trip_path(@trip) %> 
