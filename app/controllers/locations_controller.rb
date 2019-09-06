@@ -3,7 +3,7 @@ class LocationsController < ApplicationController
   before_action :set_location, only: [:show, :edit, :update, :destroy]
 
   def index
-    @locations = @trips.locations
+    @locations = @trip.locations
   end
   
   def show
@@ -51,6 +51,6 @@ class LocationsController < ApplicationController
   end
 
   def location_params
-    params.require(:location).permit(:name, :days)
+    params.require(:location).permit(:name, :days, :trip_id)
   end
 end
