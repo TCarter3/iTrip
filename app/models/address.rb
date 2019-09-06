@@ -1,3 +1,3 @@
 class Address < ApplicationRecord
-  belongs_to :Location
+  belongs_to :location
 end

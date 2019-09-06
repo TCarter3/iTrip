@@ -1,4 +1,4 @@
-<h1>Edit <%= @trip.name %></h1>
+<h1>Edit <%= @trip.name %> Trip</h1>
 
 <%= form_with(model: @trip, local: true, class: "ui form") do |f| %>
 <div class="field">
@@ -13,7 +13,7 @@
     <%= f.label :end_date %>
     <%= f.date_field :end_date, class: "input" %>
 </div>
-<%= f.submit class: "ui button purple inverted" %>
+<%= f.submit class: "ui button blue inverted" %>
 
 
 <% end %>
