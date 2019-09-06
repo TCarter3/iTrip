@@ -5,5 +5,5 @@
 <br/>
 <hr/>
 <%= link_to "Edit Location", edit_trip_location_path([@trip, @location]) %> |
-<%= link_to "Delete Location", [@trip, @location], method: :delete %> |
+<%= link_to "Delete Location", trip_location_path(@trip, @location), method: :delete %> |
 <%= link_to "Back To Locations", trip_path(@trip) %>
