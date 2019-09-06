@@ -14,10 +14,10 @@ class AddressesController < ApplicationController
   end
 
   def create
-    @address = Address.new(address_params)
+    @address = @location.addresses.new(address_params)
 
     if @address.save
-      redirect_to location_address_path(@location, @adress)
+      redirect_to location_address_path(@location, @address)
     else
       render :new
     end
@@ -28,14 +28,14 @@ class AddressesController < ApplicationController
 
   def update
     if @address.update(address_params)
-      redirect_to location_address_path(@location, @adress)
+      redirect_to location_address_path(@location, @address)
     else
       render :edit
     end
   end
 
   def destroy
-    @adress.destroy
+    @address.destroy
     redirect_to location_addresses_path(@location)
   end
 
@@ -49,6 +49,6 @@ class AddressesController < ApplicationController
     end
 
     def set_address
-      @address = Adress.find(params[:id])
+      @address = Address.find(params[:id])
     end
 end

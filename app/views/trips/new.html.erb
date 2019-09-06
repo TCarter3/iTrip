@@ -2,18 +2,18 @@
 
 <%= form_with(model: @trip, local: true, class: "ui form") do |f| %>
 <div class="field">
-    <%= f.label :name %>
-    <%= f.text_field :name, class: "input" %>
+<%= f.label :name %>
+<%= f.text_field :name, class: "input" %>
 </div>
 <div class="field">
-    <%= f.label :start_date %>
-    <%= f.date_field :start_date, class: "input" %>
+<%= f.label :start_date %>
+<%= f.date_field :start_date, class: "input" %>
 </div>
 <div class="field">
-    <%= f.label :end_date %>
-    <%= f.date_field :end_date, class: "input" %>
+<%= f.label :end_date %>
+<%= f.date_field :end_date, class: "input" %>
 </div>
-<%= f.submit class: "ui button purple inverted" %>
+<%= f.submit class: "ui button blue inverted" %>
 
 
 <% end %>
