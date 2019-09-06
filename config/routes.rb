@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   end
 
   resources :locations do
-    resources :addresses 
+    resources :addresses
   end
 
 end
