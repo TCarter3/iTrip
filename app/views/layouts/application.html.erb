@@ -9,7 +9,8 @@
     <%= javascript_pack_tag 'application' %>
   </head>
 
-  <body>
-    <%= yield %>
+  <body class="ui container">
+  <%= render "layouts/navbar" %>
+   <%= yield %>
   </body>
 </html>
