@@ -20,7 +20,7 @@ class LocationsController < ApplicationController
     @location = @trip.locations.new(location_params)
       
     if @location.save
-      redirect_to [@trip, @location]
+      redirect_to @trip
     else
       render :new
     end
@@ -37,7 +37,7 @@ class LocationsController < ApplicationController
 
   def destroy
     @location.destroy
-    redirect_to trip_locations_path
+    redirect_to trip_location_path
   end
 
   private
